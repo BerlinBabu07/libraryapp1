@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+  
+      main {
+        flex: 1 0 auto;
+      }
+  
+      body {
+        background: #fff;
+      }
+  
+      .input-field input[type=date]:focus + label,
+      .input-field input[type=text]:focus + label,
+      .input-field input[type=email]:focus + label,
+      .input-field input[type=password]:focus + label {
+        color: #e91e63;
+      }
+  
+      .input-field input[type=date]:focus,
+      .input-field input[type=text]:focus,
+      .input-field input[type=email]:focus,
+      .input-field input[type=password]:focus {
+        border-bottom: 2px solid #e91e63;
+        box-shadow: none;
+      }
+    </style>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand">Home</a>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <%for(i=0;i<nav.length;i++){%>
+            <li>
+              <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+            </li>
+           <%}%>
+          </ul>
+          
+        </nav>
+      </div>
+    </header>
+    <div class="section"></div>
+    <main>
+      <center>
+        <img class="responsive-img" style="width: 80px;border-radius: 50%; margin-top: 30px;" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" />
+        <div class="section"></div>
+  
+        <h5 class="indigo-text">Please, login into your account</h5>
+        <div class="section"></div>
+  
+        <div class="container">
+          <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+  
+            <form  class="col s12" action="/books" onsubmit="return validate()" >
+              <div class='row'>
+                <div class='col s12'>
+                </div>
+              </div>
+  
+              <div class='row'>
+                <div class='input-field col s12'>
+                  <input class='validate' type='text' name='username' id='username' value required/>
+                  <label for='Username'>Enter Username</label>
+                  
+              
+                  
+                </div>
+                <label for="error" id="erroruser" style="float:left;"></label>
+                
+              </div>
+             
+  
+              <div class='row'>
+                <div class='input-field col s12'>
+                  <input class='validate' type='password' name='password' id='password' value required/>
+                  <label for='password'>Enter your password</label>
+                 
+                </div>
+                <label for="error" id="errorpwd" style="float:left;"></label>
+                <label style='float: right;'>
+                  <a class='pink-text' href='#'><b>Forgot Password?</b></a>
+                </label>
+              </div>
+  
+              <br />
+              <center>
+                <div class='row'>
+                  <button type='submit'  name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                </div>
+              </center>
+            </form>
+          </div>
+        </div>
+        <h6>Already a member</h6>
+        <a href="./signup" style=" font-weight: bold; font-size: large ;"><span>Create account</span></a>
+      </center>
+  
+      <div class="section"></div>
+      <div class="section"></div>
+    </main>
+    <script>
+      var user=document.getElementById("username");
+      var pwd = document.getElementById("password");
+      var errorUser=document.getElementById("erroruser");
+      var errorPwd=document.getElementById("errorpwd");
+
+
+    function validate(){
+
+  // let pwdcheck=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+        // let emailCheck= /^([\w\.-]+)@([\w\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+      //   let pwdcheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        
+      //    if(email.value && pwd==""){
+      //       alert("Email cannot be empty");
+      //       return false;
+      //   }
+      //   else if(!emailCheck.test(email.value))
+      //   {
+      //     alert("Invalid Email Format;   Eg: name@domain.com");
+      //     return false;
+      //   }
+     
+
+      //   else if(pwd.value.length<=7){
+      //       alert("Password is too short ,Minimum of  8 characters required");
+         
+      //       return false;
+      //   }
+      //   else if(!pwdcheck.test(pwd.value)){
+      //       alert("Oops!!..Invalid format,  Should contain Atleast 1 uppercase,1 lowercase and  1 number required");
+          
+      //       return false;
+      //   }
+        
+    
+      //   else{
+      //       return true;
+      //   }
+
+      // }
+
+    if( user.value== "admin" && password.value==12345){
+        return true;
+    }
+    if( user.value== "" && password.value==""){
+        errorUser.innerHTML="required";
+        errorUser.style.color="blue";
+        errorPwd.innerHTML="required";
+        errorPwd.style.color="blue";
+        password.value="";
+        user.value="";
+        return false;
+    }
+
+     if(user.value== "admin" && password.value!=12345){
+            
+        errorPwd.innerHTML="Invalid Password";
+        errorPwd.style.color="red";
+        errorUser.innerHTML="Valid ";
+        errorUser.style.color="Green";
+        password.value="";
+       
+        
+        return false;
+
+    }
+     if(user.value!= "admin" && password.value==12345){
+        errorUser.innerHTML="Invalid userName";
+        errorUser.style.color="red";
+        errorPwd.innerHTML="Valid";
+        errorPwd.style.color="green";
+        
+        user.value="";
+       
+        return false;
+
+    }
+    else{
+        errorUser.innerHTML="Invalid userName";
+        errorUser.style.color="red";
+        errorPwd.innerHTML="Invalid Password";
+        errorPwd.style.color="red";
+        password.value="";
+        user.value="";
+        return false;
+    }
+    
+
+}
+
+    </script>
+  
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  </body>
+  
+  </html>
+
+
+
+
+
+

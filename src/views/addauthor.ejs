@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+      .cnts  {
+        justify-content: center;
+        text-align: center;
+        text-emphasis: none;
+        font-size: large;
+        font-weight: bolder;
+        color: rgb(0, 0, 0);
+        
+      }
+    </style>
+	</head>
+	<body >
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <%for(i=0;i<nav.length;i++){%>
+        <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+       <%}%>
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        
+        <a href="/login" class="navbar-brand">Logout</a>
+        </ul>
+     
+      
+    </nav>
+  </div>
+</header>
+
+<div id="masthead" style="background-color: rgb(98, 217, 253);">  
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-7"> -->
+        <h1 style="text-align: center; color: peru; font-weight: bolder;">Add-Author
+          <p class="lead"></p>
+        </h1>
+      </div>
+    
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer" style="background-color: rgb(3, 120, 136);"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+<div class="ll" style="background-image: linear-gradient(to top right, #3f51b5, #f19ab7);">
+  
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <!-- <div class="panel" style="background-color: black;"> -->
+        <div class="panel-body">
+          
+          
+          
+          <!--/stories-->
+         
+        <div class="container ">
+          <div class="row">
+             <div class="cnts">
+            <form method="POST" action="/addauthor/add">
+                <br>
+              
+                Author Name <br> <input type="text" name="authorname"><br><br>
+               
+                
+                <!-- DOB  <br><input type="date" name="dob"><br><br> -->
+                Book Name <br> <input type="text" name="bookname"><br><br>
+                <!-- Book Name 2 <br> <input type="text" name="bookname2"><br><br> -->
+                Genre <br><input type="text" name="genre"><br><br>
+               
+                IMAGE : <input type="file" style="margin-left: 500px;" name="image"><br><br><br>
+                <button type="submit" style="background-color: rgb(103, 68, 255); color: aliceblue;">ADD-Author</button>
+              
+            </form>
+          </div>
+          </div>
+        </div>
+      
+          <hr>
+          
+         
+          <!--/stories-->
+          
+          
+          
+          
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Design <i class="icon-heart-empty"></i> by <a href="http://www.bootply.com">Berlin Babu</a></p>      
+      </div>
+    </div>
+  </div>
+  
+</div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

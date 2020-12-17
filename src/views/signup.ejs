@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+    body {
+      background-image: linear-gradient(to top right, #3f51b5, #e91e63);
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Secular One', sans-serif;
+    }
+    h1{
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #0d28c0;
+    }
+    
+    a:hover{
+      color: #071561;
+    }
+    
+    .main-container {
+      display: flex;
+      width: 70%;
+      height: 700px;
+      min-height: 80vh;
+      background-color: white;
+      margin: 10vh auto;
+      border-radius: 12px;
+      box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+    }
+    
+    .left-container {
+      width: 40%;
+      height: 100%;
+      background-color: mintcream;
+      border-radius: 10px 0 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .left-container h1{
+        color: rgb(17, 14, 14);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-shadow: rgb(7, 154, 252);
+        font-weight: 800;
+    }
+    .left-container h2{
+        color: maroon;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-shadow: mediumspringgreen;
+        font-weight: 700;
+    }
+    
+    .right-container {
+      width: 60%;
+      height: 100%;
+      background-image: url(https://images.unsplash.com/photo-1514466256797-efd55fa1bf4e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=663&q=80);
+      background-position: center;
+      background-size: cover;
+      border-radius: 0 10px 10px 0;
+    }
+    .signup-form {
+      width: 70%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .signup-form input {
+      border-radius: 200px;
+      padding: 5px 15px;
+      height: 3.5rem;
+      font-size: 1rem;
+      background-color: #ddd;
+      color: #444;
+      border: none;
+    }
+    
+    .signup-form input {
+      display: block;
+      margin-top: 1rem;
+      width: 100%;
+      font-family: inherit;
+    }
+    
+    .signup-form input.first-name,
+    .signup-form input.last-name {
+      width: 48%;
+    }
+    
+    .signup-form input:focus {
+      outline: none;
+    }
+    
+    .signup-form input[type='checkbox']{
+      margin: 1rem 0.5rem 1rem 0;
+    }
+    
+    .signup-form input[type='checkbox'],
+    .signup-form input[type='checkbox'] + label {
+      display: inline-block;
+      width: auto;
+    }
+    
+    .signup-form .check{
+      display: flex;
+      align-items: center;
+    }
+    
+    .signup-form button {
+      color: white;
+      background-color: lightskyblue;
+      border: none;
+      padding: 1rem;
+      font-family: inherit;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      display: block;
+      width: 70%;
+      margin: auto;
+      margin-top: 2rem;
+    }
+    
+    .signup-form button:hover{
+      background-color: rgb(108, 80, 230);
+      cursor: pointer;
+    }
+    
+    button.disabled {
+      color: grey;
+      background-color: darkgrey;
+    }
+    
+    button.disabled:hover {
+      color: grey;
+      background-color: darkgrey;
+      cursor: unset;
+    }
+    
+    .signin-link {
+      color: #777;
+    }
+    
+    .signin-link:hover {
+      color: #333;
+      cursor: pointer;
+    }
+    
+    @media (max-width:1240px){
+      .left-container{
+        width: 50%;
+      }
+      .right-container{
+        width: 50%;
+      }
+    }
+    
+    @media (max-width:970px){
+      .signup-form button{
+        font-size: 1rem;
+      }
+      .signup-form input[type="checkbox"] + label{
+        font-size: 0.8rem;
+      }
+      .signin-link{
+        font-size: 0.8rem;
+      }
+    }
+    
+    @media (max-width:950px) {
+      .left-container{
+        width: 100%;
+        border-radius: 10px;
+      }
+      .main-container h1{
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+      }
+      .signup-form input{
+        margin-top: 0.5rem;
+      }
+      .right-container{
+        display: none;
+      }
+    }
+    
+    @media (max-width:550px){
+      .main-container{
+        width: 90%;
+        left: 5%;
+      }
+    }
+  </style>
+  
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <%for(i=0;i<nav.length;i++){%>
+        <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+       <%}%>
+      </ul>
+     
+  </div>
+</header>
+
+
+
+
+
+
+<div class="main-container">
+  <div class="left-container">
+    <h1>Welcome New User<br>Signup</h1>
+    <h2 >LIBRARY</h2>
+    <div style="width: 100%;">
+      <form action="/login" class="signup-form" onsubmit="return validate()">
+        <input type="text" id="username" placeholder="Enter UserName"  required>
+        <label for="error" id="erroruser" style="float:left;"></label>
+        
+        <br>
+        <!-- <input type="text" id="last-name" placeholder="Last Name"  required><br> -->
+        <input type="email" id="email" placeholder="E-mail"  required><br>
+        <input type="text" id="phonenumber" placeholder="Phone Number"  required>
+        <label for="error" id="errorph" style="float:left;"></label>
+        <br>
+        <input type="password" id="pwd" placeholder="Password" required >
+        <small style="color:black">Password should contain Minimum 8 characters</small>
+        <br>
+       
+        <input type="password" id="pwd2" placeholder="Re-enter password"  required>
+        <div class="check">
+          <input type="checkbox" onclick="checkTerms()" id="agree-terms">
+          <label for="agree-terms">Agree to
+            <a href="#">Terms &amp; Conditions</a>
+          </label>
+        </div>
+        <button type="submit" id="submit"> Sign Up</button>
+      </form>
+    </div>
+    <div class="signin-link-container">
+      <p class="signin-link">Already have an account?<a href="./login"> Click here!</p></a> 
+    </div>
+  </div>
+  <div class="right-container"></div>
+</div>
+
+
+
+<!-- script -->
+
+
+
+<script>
+
+
+let email= document.getElementById("email");
+let pwd = document.getElementById("pwd");
+let pwd2 = document.getElementById("pwd2");
+let username = document.getElementById("username");
+var errorUser=document.getElementById("erroruser");
+var errorph=document.getElementById("errorph");
+
+let phno = document.getElementById("phonenumber");
+// let pwd = document.getElementById("pwd");
+
+function validate(){
+  var namereg = /^[a-zA-Z\-]+$/;
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  // let pwdcheck=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+  let pwdcheck = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+         if(username.value ==""){
+            alert("First and Last Name cannot be empty");
+            return false;
+        }
+        else if(!namereg.test(username.value)){
+
+          errorUser.innerHTML="Invalid userName";
+          errorUser.style.color="red";
+            // alert("Invalid !!! Username accept only strings");
+            return false;
+          
+        }
+        else if(email.value && pwd==""){
+            alert("Email cannot be empty");
+            return false;
+        }
+        else if (!phoneno.test(phno.value)){
+          errorph.innerHTML="Invalid format..! Please Enter a valid Number";
+          errorph.style.color="red";
+          // alert("Phone Number is not valid..! Please Enter a valid Number  ;  10no's");
+          phno.style.border="2px solid red";
+          return false;
+        }
+
+        else if(pwd.value.length<=7){
+            alert("Password is too short ,Minimum of  8 characters required");
+            pwd.style.border="2px solid red";
+            return false;
+        }
+        else if(!pwdcheck.test(pwd.value)){
+            alert("Password!!..Invalid format,  Should contain Atleast 1 uppercase,1 lowercase and  1 number required");
+            pwd.style.border="3px solid red";
+            return false;
+        }
+        
+        else if(pwd.value != pwd2.value)  
+        {   
+            alert("Passwords did not match");
+            pwd2.style.border="2px solid red";  
+            return false;
+        }
+        else{
+            return true;
+        }
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
